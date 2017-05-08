@@ -2,20 +2,12 @@ library(dplyr)
 library(WriteXLS)
 
 ##Removes unwanted columns for 2016, based this off PreProcessing Script
-Active16 <- Active16[c('Member.Key', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan')]
-Retired16 <- Retired16[c('MKEY', 'MBIRTH', 'MSEX', 'RETDATE')]
-Deferred16 <- Deferred16[c('Mkey', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
-DeferredBOBW16 <- DeferredBOBW16[c('Mkey', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
-DeferredNonBOBW16 <- DeferredNonBOBW16[c('Mkey', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
-Terminated16 <- Terminated16[c('Member.Key', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
-
-
-##Removes unwanted columns for 2015, based this off PreProcessing Script
-Active15 <- Active15[c('Member.Key', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan')]
-Deferred15 <- Deferred15[c('Mkey', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
-DeferredBOBW15 <- DeferredBOBW15[c('Mkey', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
-DeferredNonBOBW15 <- DeferredNonBOBW15[c('Mkey', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
-Terminated15 <- Terminated15[c('Member.Key', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
+Active <- Active16[c('Member.Key', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan')]
+Retired <- Retired16[c('MKEY', 'MBIRTH', 'MSEX', 'RETDATE')]
+Deferred <- Deferred16[c('Mkey', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
+DeferredBOBW <- DeferredBOBW16[c('Mkey', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
+DeferredNonBOBW <- DeferredNonBOBW16[c('Mkey', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
+Terminated <- Terminated16[c('Member.Key', 'Birth.Date', 'Employment.Date', 'Gender', 'Date.Joined.Plan', 'Termination.Date')]
 
 ##Renames the columns so the names are consistent across all dataframes
 names(Active16) <- c('MemberKey', 'DateOfBirth_Member', 'DateOfEmployment', 'Gender_Member', 'DateJoinedPlan')
